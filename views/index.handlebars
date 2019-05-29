@@ -1,0 +1,68 @@
+{{!-- * Setup the `index.handlebars` to have the template that Handlebars can render onto.
+
+     * Create a button in `index.handlebars` that will submit the user input into the database. --}}
+     
+
+
+
+     <!-- This will be rendered with handlebar view pointing to index.handlebars -->
+
+<div class="container">
+     <!-- Put an image of a burger here -->
+     <div class="row">
+        <!-- C:\Users\vinnie\VinUCFWork\Homework\burger\public\assets\img\burger.jpg -->
+<img src="../public/assets/img/burger.jpg" alt="Burger pic">
+</div>
+    <div class="row" id="title">
+     <h1>Eat-Da-Burger</h1>
+     </div>
+       {{!-- added burger area--}}  
+      
+       <div class="row" id="burger-list">
+     <ul>
+         {{#each burgers}}
+            <li>
+                <p>{{this.id}}. {{this.burger_name}}
+                    <button data-burgerid="{{this.id}}" id="devourburger">Devout It</button>
+                </p>
+
+            </li>
+         {{/each}}
+     </ul>
+     </div>
+
+     {{!-- devoured burger area --}}
+
+<div class="row" id="devoured-list">
+    <h2>Devoured Burger</h2>
+     <ul>
+         {{#each burgers}}
+            <li>
+                <p>{{this.id}}. {{this.burger_name}}
+                   
+                </p>
+
+            </li>
+         {{/each}}
+     </ul>
+     </div>
+
+
+            {{!-- adding burger --}}
+
+     <div class="row" id="addburger">
+     <h2>Add Burger to eat here</h2>
+<form id="addburger" class="button-size">
+    <textarea type="text" name="addburger"></textarea>
+    <br>
+    <button type="submit">Add burger</button>
+                </form> 
+    </div>
+
+{{!-- editing burger --}}
+<div class="row" id="editburger">
+<h2>Edit A Burger</h2>
+<form id="editburger" class="button-size"><input type="text" name="id" placeholder="id"><textarea type="text" name="burger" placeholder="change the name of burger"></textarea><button type="submit">Update Burger</button></form> 
+    </div>
+</div>
+
