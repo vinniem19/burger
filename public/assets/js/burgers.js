@@ -16,7 +16,7 @@ $(function() {
         );
     });
 
-    $(".add-burger").on("submit", function(event) {
+    $(".add-burger-form").on("submit", function(event) {
         event.preventDefault();
     var newBurger = {
         name: $("#burger").val().trim(),

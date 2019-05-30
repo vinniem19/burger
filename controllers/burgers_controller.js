@@ -35,7 +35,7 @@ router.get("/", function(req, res) {
     console.log("condition", condition);
     burger.update(
       {
-        burgers: req.body.burgers
+        devoured: req.body.devoured
       },
       condition,
       function(result) {
