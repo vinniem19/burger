@@ -22,8 +22,10 @@ router.get("/", function(req, res) {
   });
 
   router.post("/api/burgers", function(req, res) {
-    console.log(req.body.burger);
-    burger.create(["burger_name", "devoured"],[req.body.burger_name, req.body.devoured], function(result) {
+    console.log(req.body.name);
+    
+    burger.create(["burger_name", "devoured"],[req.body.name, 0], function(result) {
+     console.log("Controller post says " + result);
       console.log(result);
       // Send back the ID of the new quote
         res.json({ id: result.insertId });

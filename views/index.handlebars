@@ -23,7 +23,7 @@
          {{#each burgers}}
             <li>
                 <p>{{this.id}}. {{this.burger_name}}
-                    <button data-burgerid="{{this.id}}" class="devour" data-devoured="true">Devour It</button>
+                    <button class="devour" data-burgerid="{{this.id}}" data-newdevour=1>Devour It</button>
                 </p>
 
             </li>
@@ -38,11 +38,8 @@
      <ul>
          {{#each burgers}}
          {{#if devoured}}
-            <li>
-                <p>
-                    {{this.id}}. {{this.burger_name}} 
-                </p>
-            </li>
+            
+                    {{>burgers/burger-block devour=false}} 
             {{/if}}
          {{/each}}
      </ul>
@@ -65,9 +62,9 @@
     </form> 
 
 {{!-- editing burger --}}
-<div class="row" id="editburger">
+{{!-- <div class="row" id="editburger">
 <h2>Edit A Burger</h2>
 <form id="editburger" class="button-size"><input type="text" name="id" placeholder="id"><textarea type="text" name="burger" placeholder="change the name of burger"></textarea><button type="submit">Update Burger</button></form> 
     </div>
-</div>
+</div> --}}
 
