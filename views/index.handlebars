@@ -21,12 +21,14 @@
        <div class="row" id="burger-list">
      <ul>
          {{#each burgers}}
+         {{#unless devoured}}
             <li>
                 <p>{{this.id}}. {{this.burger_name}}
-                    <button class="devour" data-burgerid="{{this.id}}" data-newdevour=1>Devour It</button>
+                    <button class="devour" data-id="{{this.id}}" data-newdevour=1>Devour It</button>
                 </p>
 
             </li>
+            {{/unless}}
          {{/each}}
      </ul>
      </div>

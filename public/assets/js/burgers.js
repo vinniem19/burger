@@ -6,7 +6,7 @@ $(function() {
         var newDevState = {
             devoured: newDevour
         };
-        $.ajax("/api/burgers" + id, {
+        $.ajax("/api/burgers/" + id, {
             type: "PUT",
             data: newDevState
         }).then(
