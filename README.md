@@ -7,10 +7,10 @@ There are two main sections
 -devoured
 
 This project uses the following:
--HTML 
--CSS 
--JavaScript 
--jQuery
+*HTML 
+*CSS 
+*JavaScript 
+*jQuery
 
 As well as: 
 -MySQL for database 
